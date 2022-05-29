@@ -264,9 +264,9 @@ run().catch(console.dir);
 
 
 app.listen(port, () => {
-    console.log('Digitaz server is running in port', port);
+    console.log('Rinrav server is running in port', port);
 })
 
 app.get('/', (req, res) => {
-    res.send('Hello! I am from Digitaz server.')
+    res.send('Hello! I am from Rinrav server.')
 })
