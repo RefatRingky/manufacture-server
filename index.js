@@ -84,7 +84,7 @@ const run = async () => {
             const products = await productCollenction.find(query).toArray();
             res.send(products)
         })
-
+        // load single data from all data
         app.get('/product/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) };
