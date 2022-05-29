@@ -104,7 +104,7 @@ const run = async () => {
             const token = jwt.sign({ email: email }, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '3h' })
             res.send({ result, token });
         });
-
+        // filter one single user
         app.get('/user/:email', async (req, res) => {
             const email = req.params.email;
             const filter = { email: email };
