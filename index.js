@@ -142,7 +142,7 @@ const run = async () => {
             res.send(updatedUser);
         })
 
-
+    //    verify order
         app.post('/order', verifyJWT, async (req, res) => {
             const order = req.body;
             const result = await orderCollenction.insertOne(order);
