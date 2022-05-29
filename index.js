@@ -148,7 +148,7 @@ const run = async () => {
             const result = await orderCollenction.insertOne(order);
             res.send(result);
         });
-
+        // verify the orders 
         app.get('/orders', verifyJWT, async (req, res) => {
             const email = req.query.email;
             const decodedEmail = req.decoded.email;
