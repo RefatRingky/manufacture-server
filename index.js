@@ -12,7 +12,9 @@ const corsConfig = {
     credentials: true,
 }
 
-
+app.use(express.json());
+app.use(cors(corsConfig))
+app.options('*', cors(corsConfig))
 
 
 function verifyJWT(req, res, next) {
